@@ -1,10 +1,14 @@
 import time
+import allure
+from allure_commons.types import AttachmentType
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from selenium.webdriver.common.by import By
 from POM.meesho import Meesho
 
-
+@allure.story("BrowserStackDemo")
+@allure.severity(allure.severity_level.NORMAL)
+@allure.testcase("Handledropdown")
 def test_dropdown():
     options = UiAutomator2Options().load_capabilities({
         "app": "bs://ecd0257cbb0596c8547405ca9de5528ceb49c6de",
@@ -40,4 +44,5 @@ def test_dropdown():
     # select country from dropdown
     ms.click_country("🇦🇫     Afghanistan (+93)")
     print("Dropdown handled successfully")
+    allure.attach(driver.get_screenshot_as_png(), name="screen", attachment_type=AttachmentType.PNG)
     driver.quit()
