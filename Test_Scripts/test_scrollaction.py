@@ -32,7 +32,7 @@ def test_scrollaction():#scrolling actions by coordinates
     # ms.click_allow()
     print("welcome to Home page of meesho")
     ms.click_categories()
-    time.sleep(2)
+    time.sleep(3)
     print("welcome to categories page of meesho")
 
     for i in range(6):
