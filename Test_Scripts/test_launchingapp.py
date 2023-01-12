@@ -30,6 +30,6 @@ def test_launchingapp():
         # ms.click_close_window()
         driver.find_element(By.ID, "com.meesho.supply:id/close").click()
         # ms.click_allow()
-        print("welcome to Home page of meesho")
+        print("welcome to Home page of Meesho")
         allure.attach(driver.get_screenshot_as_png(), name="testscreen", attachment_type=AttachmentType.PNG)
         driver.quit()
